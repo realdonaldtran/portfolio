@@ -1,168 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Your Name – Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Portfolio | Educational Publishing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #0f0f0f;
-  color: #fff;
-}
-
-header {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  color: #aaa;
-  font-size: 18px;
-}
-
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #1a1a1a;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  opacity: 0.85;
-}
-
-.card-content {
-  position: absolute;
-  bottom: 0;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  width: 100%;
-}
-
-.card h3 {
-  margin: 0;
-  font-size: 20px;
-}
-
-.card p {
-  margin: 5px 0 0;
-  color: #bbb;
-  font-size: 14px;
-}
-
-.about {
-  max-width: 700px;
-  color: #ccc;
-  line-height: 1.6;
-}
-
-footer {
-  text-align: center;
-  padding: 60px 20px;
-  color: #666;
-}
-</style>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
-
 <body>
 
-<header>
-  <h1>Your Name</h1>
-  <div class="subtitle">
-    Graphic Designer • Production • Frontend & Data Transition
-  </div>
+<header class="header">
+  <div class="logo">Your Name</div>
+  <nav>
+    <a href="#">Portfolio</a>
+    <a href="#">About</a>
+    <a href="#">Resume</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
-<section class="section">
-  <h2>Selected Work</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="https://picsum.photos/600/400?1">
-      <div class="card-content">
-        <h3>Retail Campaign Design</h3>
-        <p>Visual system, print + digital rollout</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://picsum.photos/600/400?2">
-      <div class="card-content">
-        <h3>E-commerce Redesign</h3>
-        <p>UX improvements + layout system</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://picsum.photos/600/400?3">
-      <div class="card-content">
-        <h3>Brand Identity System</h3>
-        <p>Typography, color, guidelines</p>
-      </div>
-    </div>
-
-  </div>
+<section class="hero">
+  <h1>Educational Publishing Portfolio</h1>
+  <p>20+ years in design, production, and content systems</p>
 </section>
 
-<section class="section">
-  <h2>Case Study</h2>
-  <div class="about">
-    <p><strong>Retail Campaign Design</strong></p>
-    <p>
-      Led design production across print and digital channels, ensuring consistency
-      across multiple formats and deadlines. Developed scalable templates and improved
-      asset workflows, reducing turnaround time.
-    </p>
+<section class="categories">
+
+  <div class="card">
+    <h2>Student Books</h2>
+    <p>4-color layouts, full programs, complex pagination</p>
   </div>
+
+  <div class="card">
+    <h2>Teacher Guides</h2>
+    <p>Instructional layouts, annotations, layered content</p>
+  </div>
+
+  <div class="card">
+    <h2>Decodable Readers</h2>
+    <p>Phonics-driven typography and structured layouts</p>
+  </div>
+
+  <div class="card">
+    <h2>Graphic Systems</h2>
+    <p>Organizers, diagrams, instructional visuals</p>
+  </div>
+
+  <div class="card">
+    <h2>Digital Projects</h2>
+    <p>eBooks, interactive PDFs, digital conversions</p>
+  </div>
+
+  <div class="card">
+    <h2>Production Systems</h2>
+    <p>Templates, workflows, style guides</p>
+  </div>
+
 </section>
 
-<section class="section">
-  <h2>About</h2>
-  <div class="about">
-    <p>
-      I’m a graphic designer with a background in production and systems thinking.
-      I specialize in creating scalable design solutions across print and digital.
-      Currently transitioning into frontend and data-driven design workflows.
-    </p>
-  </div>
-</section>
-
-<footer>
-  © 2026 Your Name
+<footer class="footer">
+  <p>© 2026 Your Name</p>
 </footer>
 
 </body>
