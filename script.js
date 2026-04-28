@@ -16,9 +16,43 @@
 <p class="p1"><span class="s1">const cards = document.querySelectorAll(".card");</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1">cards.forEach(card =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>card.addEventListener("click", () =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>alert("This will link to detailed project pages.");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>card.addEventListener("click", () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>alert("This will link to detailed project pages.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
 <p class="p1"><span class="s1">});</span></p>
 </body>
 </html>
+const themeRoot = document.documentElement;
+const themeToggle = document.querySelector("#theme-toggle");
+const year = document.querySelector("#year");
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  themeRoot.setAttribute("data-theme", savedTheme);
+}
+
+const updateThemeIcon = () => {
+  const isDark = themeRoot.getAttribute("data-theme") === "dark";
+  themeToggle.querySelector(".theme-toggle__icon").textContent = isDark ? "☀️" : "🌙";
+};
+
+updateThemeIcon();
+
+themeToggle?.addEventListener("click", () => {
+  const current = themeRoot.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+
+  if (next === "light") {
+    themeRoot.removeAttribute("data-theme");
+    localStorage.setItem("theme", "light");
+  } else {
+    themeRoot.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
+
+  updateThemeIcon();
+});
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
