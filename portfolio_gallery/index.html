@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Gallery | Publishing Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#e9e8e6",
+            "outline": "#727876",
+            "inverse-surface": "#303130",
+            "surface": "#fbf9f8",
+            "surface-bright": "#fbf9f8",
+            "surface-container": "#efeeec",
+            "on-primary-fixed-variant": "#364b46",
+            "tertiary": "#25120b",
+            "on-surface": "#1b1c1b",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "on-background": "#1b1c1b",
+            "on-secondary-fixed": "#151c27",
+            "tertiary-container": "#3c261e",
+            "secondary": "#585f6c",
+            "secondary-fixed-dim": "#c0c7d6",
+            "surface-tint": "#4d635e",
+            "secondary-fixed": "#dce2f3",
+            "on-error-container": "#93000a",
+            "on-primary-container": "#809792",
+            "inverse-on-surface": "#f2f0ef",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#f5f3f2",
+            "on-tertiary-fixed": "#2a170f",
+            "surface-container-highest": "#e3e2e1",
+            "secondary-container": "#dce2f3",
+            "primary-container": "#1a2f2b",
+            "on-error": "#ffffff",
+            "outline-variant": "#c2c8c5",
+            "on-tertiary": "#ffffff",
+            "primary": "#051a17",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fbf9f8",
+            "primary-fixed-dim": "#b4ccc5",
+            "primary-fixed": "#d0e8e1",
+            "on-tertiary-container": "#ac8c80",
+            "on-secondary-fixed-variant": "#404754",
+            "tertiary-fixed-dim": "#e3bfb3",
+            "surface-dim": "#dbdad8",
+            "on-secondary-container": "#5e6572",
+            "inverse-primary": "#b4ccc5",
+            "error": "#ba1a1a",
+            "surface-variant": "#e3e2e1",
+            "on-tertiary-fixed-variant": "#5a4138",
+            "on-surface-variant": "#424846",
+            "on-primary-fixed": "#091f1b",
+            "tertiary-fixed": "#ffdbcf"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "32px",
+            "stack-lg": "48px",
+            "container-max": "1120px",
+            "section-padding": "128px",
+            "stack-md": "24px",
+            "unit": "8px",
+            "stack-sm": "12px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Newsreader"],
+            "body-md": ["Work Sans"],
+            "body-lg": ["Work Sans"],
+            "headline-md": ["Newsreader"],
+            "label-sm": ["Work Sans"],
+            "display-xl": ["Newsreader"]
+          },
+          "fontSize": {
+            "headline-lg": ["2.5rem", { "lineHeight": "1.2", "fontWeight": "500" }],
+            "body-md": ["1rem", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "body-lg": ["1.125rem", { "lineHeight": "1.7", "fontWeight": "400" }],
+            "headline-md": ["1.75rem", { "lineHeight": "1.3", "fontWeight": "500" }],
+            "label-sm": ["0.75rem", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "display-xl": ["4.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #fbf9f8;
+      color: #1b1c1b;
+      -webkit-font-smoothing: antialiased;
+    }
+    .project-card-shadow {
+      box-shadow: 0 10px 40px -10px rgba(5, 26, 23, 0.04);
+    }
+  </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-zinc-100">
+<div class="max-w-[1120px] mx-auto flex justify-between items-center px-8 py-6">
+<div class="text-2xl font-serif tracking-tight text-emerald-950">
+        Publishing Archive
+      </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Newsreader'] italic font-medium text-zinc-500 hover:text-emerald-700 transition-colors duration-300" href="#">Home</a>
+<a class="font-['Newsreader'] italic font-medium text-emerald-900 border-b-2 border-emerald-900 pb-1 hover:text-emerald-700 transition-colors duration-300" href="#">Gallery</a>
+<a class="font-['Newsreader'] italic font-medium text-zinc-500 hover:text-emerald-700 transition-colors duration-300" href="#">About</a>
+<a class="font-['Newsreader'] italic font-medium text-zinc-500 hover:text-emerald-700 transition-colors duration-300" href="#">Resume</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-body-md hover:opacity-90 transition-all duration-300">
+        Contact
+      </button>
+</div>
+</nav>
+<main class="max-w-[1120px] mx-auto px-8 pt-40">
+<!-- Header Section -->
+<header class="mb-stack-lg">
+<h1 class="font-display-xl text-display-xl text-primary mb-6">Selected Works</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        A curated archive of educational publishing projects, focusing on instructional design, clarity, and literacy development across multiple media platforms.
+      </p>
+</header>
+<!-- Category Filters -->
+<section class="mb-stack-lg flex flex-wrap gap-x-8 gap-y-4 items-center">
+<a class="font-label-sm text-label-sm text-primary border-b border-primary pb-1" href="#">All</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors duration-300" href="#">Student Books</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors duration-300" href="#">Teacher Guides</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors duration-300" href="#">Decodable Readers</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors duration-300" href="#">Digital Projects</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors duration-300" href="#">Graphic Organizers</a>
+</section>
+<!-- Projects Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-section-padding">
+<!-- Project 1 -->
+<article class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden bg-surface-container mb-stack-md relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern textbook cover design featuring abstract geometric patterns in soft teal and cream with elegant typography for educational publishing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxkw9N7W_-NGIenlSUI7tTnDlZQoGEq5dTnjBkCRCuej3UoGgmGKXjupCLIoAoypBLqBoY2rpd1qXI0_I63M9QH3mdi1cVUHb4UvfrbDLbb51E30l6A1rsANX06WplxqtMsSopB3W90zhavwRiesUH9Jyg9NuG5KZyLptNy9dd0tR_rRv_wMpEhwrBMF8Rl_Z-37oZqXhKbMAMdN_NmeMKS4uPMzMvJAnHhmjBm9sfO7pIdoR0RBuXBTo1kwDO1V8EBffsCOERqePY"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Student Books</span>
+<h3 class="font-headline-md text-headline-md text-primary">4-Color Student Book Series</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A comprehensive elementary literacy series featuring integrated phonics and high-engagement narratives.</p>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden bg-surface-container mb-stack-md relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist digital tablet interface showing an interactive teacher guide with clean navigation and scholarly design aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtsV6AWz2YtOIgtyl6q1lHx_A7XSOPCTOCjR4MLJqFHGWsLFzssE5VuonQFvlRbOi12RgKL__Ui3VG8xybPvawjXJMSGgfF795oHh2JUvFgUp9jsgLh6PyCeUr2K_ZlZz88koaP_HsEdK5z5hyFNW8GmcsXPXQ_SXOW5gc_GQ5iR6z_dGWIcCrJt3dFK6fmZ-5MEPFSrPLWy9TVE_H8Yhhdchkvh1utdi-tuPmpuZzgcogJhyhQ5x6yLz4Kea_r934jkPzMDvTfbjM"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Digital Projects</span>
+<h3 class="font-headline-md text-headline-md text-primary">Interactive Teacher Resource</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Web-based pedagogical support tool designed for seamless classroom implementation and lesson planning.</p>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden bg-surface-container mb-stack-md relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of printed decodable readers for children with bright clear illustrations and serif fonts on high-quality paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDErITwsGB4rK8YFWH4ufOdyOjh1BgiU_6WeuwvjvRCDKTM1XTPqd3Z0fg1HA4VS_IL9balrXMNHGglCG2eES_mQY4Xu5W2HsMmG3AAVN8UdjUx8Z_NaYtdtgW4Dl0ux2rkOGdQ1ugczHRcSBviG5lkezZEYujmGRGxltT5Tuj7QA9caonzpkVXswANESnENrNl3HSm5lBMN2QTFbVmz3QZ0X7D2nUmxo2xOt6VkzWbrcN72hP3dVVXENNHx77Tzvz549xEubRwtsC"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Decodable Readers</span>
+<h3 class="font-headline-md text-headline-md text-primary">Foundational Literacy Kit</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Structured phonics-based readers crafted for early elementary progression with controlled vocabulary.</p>
+</div>
+</article>
+<!-- Project 4 -->
+<article class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden bg-surface-container mb-stack-md relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial spread of a teacher's edition guide with detailed marginalia and structured instructional boxes in a grid layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmQNBTdcZ5mOl3UG0_vuLw3MBqN4sqv_tadmz_t_xvuC8DpqTfQDyCVe67MES28MAAJx8LCWCB8vON86hHrUq70UqKvf6npEnOAXbWEK2LBN4MaGDBWrcAmZeBpzD2GLRVX4nBSgnhG-Uk7zRdVUH0oewk5FctIGsc3M-q-HAPy1SX0YH--DHlirQSjVa_bH1YHLtPqhwzKOsWp1oRtDXd_rTQB_m-XAtGPYRcpJIWHnOFS79oj-MlfBqtvLaDqWFyim3MjPGVPuvK"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Teacher Guides</span>
+<h3 class="font-headline-md text-headline-md text-primary">Middle School Pedagogy Guide</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Detailed instructional framework designed to bridge reading comprehension gaps in secondary education.</p>
+</div>
+</article>
+<!-- Project 5 -->
+<article class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden bg-surface-container mb-stack-md relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Graphic organizer worksheets with clean lines and sophisticated layouts for student note-taking and critical thinking exercises" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZnvxUz1eZYKKOvRxkr5WdpCIzYmT78ZeOZ2kZ8-JitBGE_sW71zPUOyMIxik4wbr5MIjmRZNme9ykixgdmCWPy9Rlpvm0h4QlIuf-4ZDEB2HiDmbHg_-CR4xhaHaHjzgQ4Txs0IJXeU5ekeVaHs5fMANxVJWJN2Omkkzmrg4yVI0niZ8msGZ2HFltLE6bUswr4SuCvReMgizsuwrYjXsHPE8n9s35TRlnWWdzcmWmrdXnIMRFGeyW_NMcnGKYuogJRlyl4HmFmukE"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Graphic Organizers</span>
+<h3 class="font-headline-md text-headline-md text-primary">Cognitive Map Templates</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A suite of visual thinking tools optimized for both digital and print-to-order classroom use.</p>
+</div>
+</article>
+<!-- Project 6 -->
+<article class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden bg-surface-container mb-stack-md relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Overview of a digital publishing platform dashboard with editorial workflow features and sleek scholarly interface design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5MOKbIlVGNiktPIjVcN8maPuTwzlwLhhK2Al2MHamsotRxXjZiX6kZ-yE6YNpzuRZ42oIviYGNLS0QkqAVQ9a3x7qvLjd3Okz5q235t_FpDEn5etRLTf_M-oymdV662opv7AVOKgTrXaljT02D2BvBu6-a8U-eUcrvTapVaNjjFDqV7Tp-zs5Qb7JQudggnZ46DWf2ouznk-5eKb9j1t6Ip_rvvSGhAMkH-HLqyssK-nUh8JTHV2nizey60QfiMDAOSrxIDG6H-ZB"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Digital Projects</span>
+<h3 class="font-headline-md text-headline-md text-primary">Editorial Workflow System</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Custom-built CMS architecture tailored for large-scale textbook production cycles.</p>
+</div>
+</article>
+</section>
+<!-- CTA Section -->
+<section class="mt-section-padding border-t border-outline-variant pt-stack-lg text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Have a project in mind?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto">
+        I am currently available for consulting on instructional design and educational product development.
+      </p>
+<button class="bg-primary text-on-primary px-10 py-4 font-body-md hover:opacity-90 transition-all duration-300">
+        Inquire about collaboration
+      </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-32 bg-zinc-50 border-t border-zinc-200">
+<div class="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between items-center py-16 px-8 gap-8">
+<div class="text-lg font-serif italic text-emerald-900">
+        Publishing Archive
+      </div>
+<div class="flex gap-8">
+<a class="font-['Newsreader'] text-sm tracking-wide text-zinc-400 hover:text-emerald-700 underline decoration-zinc-300 duration-300 ease-in" href="#">LinkedIn</a>
+<a class="font-['Newsreader'] text-sm tracking-wide text-emerald-900 font-semibold hover:text-emerald-700 underline decoration-zinc-300 duration-300 ease-in" href="#">Contact</a>
+<a class="font-['Newsreader'] text-sm tracking-wide text-zinc-400 hover:text-emerald-700 underline decoration-zinc-300 duration-300 ease-in" href="#">Privacy Policy</a>
+</div>
+<div class="font-['Newsreader'] text-sm tracking-wide text-zinc-400">
+        © 2024 Educational Publishing Veteran. All rights reserved.
+      </div>
+</div>
+</footer>
+</body></html>
